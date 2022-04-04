@@ -43,6 +43,8 @@ body {
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;
+	@include flexbox();
+	flex-direction: column;
 	&.loaded {
 	}
 }
@@ -85,6 +87,100 @@ body {
 //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>====================================================================================================
 
 //<ОСНОВНОЙ БЛОК>====================================================================================================
+.mainblock {
+	flex: 1 1 auto;
+	position: relative;
+	@include flexbox();
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	// .mainblock__content
+
+	&__content {
+		position: relative;
+		z-index: 1;
+
+	}
+
+	// .mainblock__logo
+
+	&__logo {
+		margin: 0px 0px 159px 0px;
+	}
+
+	// .mainblock__text
+
+	&__text {
+		color: #ffffff;
+		position: relative;
+		padding: 0px 0px 45px 0px;
+		margin: 0px 0px 227px 0px;
+		&::after{
+			content: "";
+			width: 105px;
+			height: 2px;
+			background-color: #ffffff;
+			position: absolute;
+			left: 50%;
+			margin: 0px 0px 0px -52.5px;
+			bottom: 0;
+		}
+	}
+
+	// .mainblock__title
+
+	&__title {
+		font-size: 34px;
+		line-height: 40px;
+		font-weight: 900;
+		text-transform: uppercase;
+		letter-spacing: 0.16em;
+		margin: 0px 0px 18px 0px;
+	}
+
+	// .mainblock__subtitle
+
+	&__subtitle {
+		font-size: 26px;
+		font-weight: 400;
+		text-transform: none;
+	}
+
+	// .mainblock__footer
+
+	&__footer {
+	}
+
+	// .mainblock__btn
+
+	&__btn {
+	}
+
+	// .mainblock__arrow
+
+	&__arrow {
+	}
+
+	// .mainblock__image
+
+	&__image {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top:0;
+		left: 0;
+
+	}
+}
+
+.btn {
+
+	// .btn_w
+
+	&_w {
+	}
+}
+
 
 //====================================================================================================
 
