@@ -33,13 +33,26 @@ if ($('.gallery').length > 0) {
 		// Custom options
 	});
 }
+
 /*
 CLOUD-ZOOM
 <a rel="position:'right',adjustX:25,adjustY:0,Width: 432" href="img/product/zoom.jpg" class="cloud-zoom product-main-mainimage__item">
 	<img class="cloudzoom-gallery" src="img/product/zoom.jpg" alt="" />
 </a>
 */
+$('.filter__item').click(function (event) {
+	var i = $(this).data('filter');
+	if (i == 1) {
+		$('.portfolio__column').show();
+	} else {
+		$('.portfolio__column').hide();
+		$('.portfolio__column.f_' + i).show();
+	}
+	$('.filter__item').removeClass('active');
+	$(this).addClass('active');
 
+	return false;
+});
 
 //POPUP
 $('.pl').click(function (event) {
@@ -295,4 +308,8 @@ function mainblock() {
 	$('.mainblock').css('min-height', h);
 }
 mainblock();
+
+
+
+
 
