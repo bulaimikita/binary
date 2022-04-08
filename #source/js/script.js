@@ -287,3 +287,12 @@ function tip() {
 		$(this).toggleClass('active');
 	});
 }
+$(windows).resize(function (event) {
+	mainblock();
+});
+function mainblock() {
+	var h = s(windows).outerHeight();
+	$('.mainblock').css('min-height', h);
+}
+mainblock();
+
